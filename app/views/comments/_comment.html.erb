@@ -9,9 +9,18 @@
     </p>
 
     <p>
-    <%= link_to 'Eliminar Comentario', 
-        [comment.article, comment],
-        method: :delete,
-        data: {confirm: 'Estas seguro de eliminar este comentario?'} %>
-    </p> 
+    
+
+<%
+=begin%>
+  <%= link_to 'Eliminar Comentario', 
+        [c.article, c],
+        method: :destroy,
+        data: {confirm: 'Estas seguro de eliminar este comentario?'} %>   
+<%
+=end%>
+
+
+-----
+  </p>  
 <% end %>
