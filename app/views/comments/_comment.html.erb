@@ -1,0 +1,17 @@
+<% @article.comments.each do |c| %>
+    <p>
+        <strong>Usuario:</strong>
+        <%= c.commenter %>
+    </p>
+    <p>
+        <strong>Comentario:</strong>
+        <%= c.body %>
+    </p>
+
+    <p>
+    <%= link_to 'Eliminar Comentario', 
+        [comment.article, comment],
+        method: :delete,
+        data: {confirm: 'Estas seguro de eliminar este comentario?'} %>
+    </p> 
+<% end %>
